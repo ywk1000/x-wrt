@@ -265,9 +265,11 @@ px-4885-4M|\
 px-4885-8M)
 	set_wifi_led "px-4885:orange:wifi"
 	;;
+r6220b|\
+r6220a|\
 r6220)
-	ucidef_set_led_netdev "wan" "wan" "$boardname:green:wan" eth0.2
-	set_wifi_led "$boardname:green:wifi"
+	ucidef_set_led_netdev "wan" "wan" "r6220:green:wan" eth0.2
+	set_wifi_led "r6220:green:wifi"
 	;;
 re350-v1)
 	ucidef_set_led_netdev "wifi2g" "Wifi 2.4G" "$boardname:blue:wifi2G" "wlan0"
