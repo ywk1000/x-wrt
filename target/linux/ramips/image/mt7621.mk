@@ -175,6 +175,14 @@ define Device/d-team_newifi-d2
 endef
 TARGET_DEVICES += d-team_newifi-d2
 
+define Device/nxc200p
+  DTS := NXC200P
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  DEVICE_TITLE := Nxc200p Device
+  DEVICE_PACKAGES := uboot-envtools kmod-usb3 kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += nxc200p
+
 define Device/pbr-m1
   DTS := PBR-M1
   IMAGE_SIZE := $(ralink_default_fw_size_16M)
@@ -184,6 +192,14 @@ define Device/pbr-m1
 	kmod-usb3 kmod-usb-ledtrig-usbport wpad-mini
 endef
 TARGET_DEVICES += pbr-m1
+
+define Device/puppies
+  DTS := PUPPIES
+  IMAGE_SIZE := $(ralink_default_fw_size_16M)
+  DEVICE_TITLE := Puppies Device
+  DEVICE_PACKAGES := uboot-envtools kmod-usb3 kmod-usb-ledtrig-usbport
+endef
+TARGET_DEVICES += puppies
 
 define Device/r6220
   DTS := R6220

@@ -116,6 +116,7 @@ platform_check_image() {
 	nixcore-x1-8M|\
 	nixcore-x1-16M|\
 	nw718|\
+	nxc200p|\
 	omega2|\
 	omega2p|\
 	oy-0001|\
@@ -125,6 +126,7 @@ platform_check_image() {
 	psg1218a|\
 	psg1218b|\
 	psr-680w|\
+	puppies|\
 	px-4885-4M|\
 	px-4885-8M|\
 	rb750gr3|\
