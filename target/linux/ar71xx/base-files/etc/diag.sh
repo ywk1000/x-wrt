@@ -268,6 +268,9 @@ get_status_led() {
 	koala)
 		status_led="$board:blue:sys"
 		;;
+	k2t)
+		status_led="$board:red:lan"
+		;;
 	lan-turtle)
 		status_led="$board:orange:system"
 		;;
