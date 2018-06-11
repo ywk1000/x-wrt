@@ -506,6 +506,9 @@ ar71xx_board_detect() {
 	*"Atheros AP96")
 		name="ap96"
 		;;
+	*"ARRIS AP board")
+		name="arris"
+		;;
 	*"AW-NR580")
 		name="aw-nr580"
 		;;

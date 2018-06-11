@@ -55,6 +55,7 @@ enum ath79_mach_type {
 	ATH79_MACH_ARCHER_C7_V2,		/* TP-LINK Archer C7 V2 board */
 	ATH79_MACH_ARCHER_C7_V4,		/* TP-LINK Archer C7 V4 board */
 	ATH79_MACH_ARDUINO_YUN,			/* Yun */
+	ATH79_MACH_ARRIS,			/* ARRIS AP board */
 	ATH79_MACH_AW_NR580,			/* AzureWave AW-NR580 */
 	ATH79_MACH_BHR_4GRV2,			/* Buffalo BHR-4GRV2 */
 	ATH79_MACH_BHU_BXU2000N2_A1,		/* BHU BXU2000n-2 A1 */

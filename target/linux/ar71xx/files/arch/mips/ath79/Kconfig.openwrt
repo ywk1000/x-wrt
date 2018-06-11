@@ -283,6 +283,16 @@ config ATH79_MACH_C60
 	select ATH79_DEV_NFC
 	select ATH79_DEV_USB
 
+config ATH79_MACH_ARRIS
+	bool "ARRIS AP board"
+	select SOC_QCA955X
+	select ATH79_DEV_GPIO_BUTTONS
+	select ATH79_DEV_LEDS_GPIO
+	select ATH79_DEV_NFC
+	select ATH79_DEV_SPI
+	select ATH79_DEV_USB
+	select ATH79_DEV_WMAC
+
 config ATH79_MACH_AW_NR580
 	bool "AzureWave AW-NR580 board support"
 	select SOC_AR71XX

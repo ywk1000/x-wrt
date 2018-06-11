@@ -15,6 +15,23 @@ define Build/MerakiNAND-old
 endef
 
 
+define Device/arris
+  DEVICE_TITLE := ARRIS AP board
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x kmod-usb-core kmod-usb2 kmod-usb-ledtrig-usbport
+  BOARDNAME := ARRIS
+  BLOCKSIZE := 128k
+  PAGESIZE := 2048
+  IMAGE_SIZE := 72m
+  KERNEL_SIZE := 4096k
+  UBINIZE_OPTS := -E 5
+  MTDPARTS := ar934x-nfc:1m(u-boot)ro,1m(boot-flag),4m(kernel),68m(ubi),27m(config),1m(scfgmgr),4m(openwrt),1m(ft),2m(PKI),1m(caldata)ro
+  IMAGES := sysupgrade.tar factory.bin
+  KERNEL := kernel-bin | patch-cmdline | lzma | uImage lzma
+  IMAGE/factory.bin := append-kernel | pad-to $$$$(KERNEL_SIZE) | append-ubi | check-size $$$$(IMAGE_SIZE)
+  IMAGE/sysupgrade.tar := sysupgrade-tar
+endef
+TARGET_DEVICES += arris
+
 define Device/c-60
   DEVICE_TITLE := AirTight C-60
   DEVICE_PACKAGES := kmod-spi-gpio kmod-usb-core kmod-usb2 kmod-ath9k
