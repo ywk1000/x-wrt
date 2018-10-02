@@ -96,7 +96,7 @@ define Device/linksys_ea8500
 	IMAGES := factory.bin sysupgrade.bin
 	IMAGE/factory.bin := append-kernel | pad-to $$$${KERNEL_SIZE} | append-ubi
 	DEVICE_TITLE := Linksys EA8500
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += linksys_ea8500
 
@@ -108,7 +108,7 @@ define Device/nec_wg2600hp
 	DEVICE_TITLE := NEC Aterm WG2600HP
 	IMAGES := sysupgrade.bin
 	IMAGE/sysupgrade.bin := append-kernel | append-rootfs | pad-rootfs | append-metadata
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += nec_wg2600hp
 
@@ -123,7 +123,7 @@ define Device/netgear_d7800
 	BOARD_NAME := d7800
 	SUPPORTED_DEVICES += d7800
 	DEVICE_TITLE := Netgear Nighthawk X4 D7800
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += netgear_d7800
 
@@ -138,7 +138,7 @@ define Device/netgear_r7500
 	BOARD_NAME := r7500
 	SUPPORTED_DEVICES += r7500
 	DEVICE_TITLE := Netgear Nighthawk X4 R7500
-	DEVICE_PACKAGES := ath10k-firmware-qca988x-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca988x
 endef
 TARGET_DEVICES += netgear_r7500
 
@@ -153,7 +153,7 @@ define Device/netgear_r7500v2
 	BOARD_NAME := r7500v2
 	SUPPORTED_DEVICES += r7500v2
 	DEVICE_TITLE := Netgear Nighthawk X4 R7500v2
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct ath10k-firmware-qca988x-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0 ath10k-firmware-qca988x
 endef
 TARGET_DEVICES += netgear_r7500v2
 
@@ -168,7 +168,7 @@ define Device/netgear_r7800
 	BOARD_NAME := r7800
 	SUPPORTED_DEVICES += r7800
 	DEVICE_TITLE := Netgear Nighthawk X4S R7800
-	DEVICE_PACKAGES := ath10k-firmware-qca9984-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca9984
 endef
 TARGET_DEVICES += netgear_r7800
 
@@ -182,7 +182,7 @@ define Device/qcom_ipq8064-ap148
 	BOARD_NAME := ap148
 	SUPPORTED_DEVICES += ap148
 	DEVICE_TITLE := Qualcomm AP148
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += qcom_ipq8064-ap148
 
@@ -195,7 +195,7 @@ define Device/qcom_ipq8064-ap148-legacy
 	BOARD_NAME := ap148
 	SUPPORTED_DEVICES := qcom,ipq8064-ap148 ap148
 	DEVICE_TITLE := Qualcomm AP148 (legacy)
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += qcom_ipq8064-ap148-legacy
 
@@ -208,7 +208,7 @@ define Device/qcom_ipq8064-ap161
 	PAGESIZE := 2048
 	BOARD_NAME := ap161
 	DEVICE_TITLE := Qualcomm AP161
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += qcom_ipq8064-ap161
 
@@ -218,7 +218,7 @@ define Device/qcom_ipq8064-db149
 	KERNEL_INSTALL := 1
 	BOARD_NAME := db149
 	DEVICE_TITLE := Qualcomm DB149
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += qcom_ipq8064-db149
 
@@ -231,7 +231,7 @@ define Device/tplink_c2600
 	SUPPORTED_DEVICES += c2600
 	TPLINK_BOARD_ID := C2600
 	DEVICE_TITLE := TP-Link Archer C2600
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 endef
 TARGET_DEVICES += tplink_c2600
 
@@ -246,7 +246,7 @@ define Device/tplink_vr2600v
 	BOARD_NAME := vr2600v
 	SUPPORTED_DEVICES += vr2600v
 	DEVICE_TITLE := TP-Link Archer VR2600v
-	DEVICE_PACKAGES := ath10k-firmware-qca99x0-ct
+	DEVICE_PACKAGES := ath10k-firmware-qca99x0
 	IMAGES := sysupgrade.bin
 	IMAGE/sysupgrade.bin := pad-extra 512 | append-kernel | pad-to $$$${KERNEL_SIZE} | append-rootfs | pad-rootfs | append-metadata
 endef
@@ -262,7 +262,7 @@ define Device/zyxel_nbg6817
 	RAS_VERSION := "V1.99(OWRT.9999)C0"
 	SUPPORTED_DEVICES += nbg6817
 	DEVICE_TITLE := ZyXEL NBG6817
-	DEVICE_PACKAGES := ath10k-firmware-qca9984-ct e2fsprogs kmod-fs-ext4 losetup
+	DEVICE_PACKAGES := ath10k-firmware-qca9984 e2fsprogs kmod-fs-ext4 losetup
 	$(call Device/ZyXELImage)
 endef
 TARGET_DEVICES += zyxel_nbg6817

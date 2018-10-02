@@ -116,7 +116,7 @@ TARGET_DEVICES += ubnt_nano-m
 define Device/ubnt_lap-120
   $(Device/ubnt-wa)
   DEVICE_TITLE := Ubiquiti LiteAP ac (LAP-120)
-  DEVICE_PACKAGES += kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES += kmod-ath10k ath10k-firmware-qca988x
   IMAGE_SIZE := 15744k
   IMAGE/factory.bin := $$(IMAGE/sysupgrade.bin) | mkubntimage-split
 endef
@@ -125,7 +125,7 @@ TARGET_DEVICES += ubnt_lap-120
 define Device/ubnt_nanostation-ac
   $(Device/ubnt-wa)
   DEVICE_TITLE := Ubiquiti Nanostation AC
-  DEVICE_PACKAGES += kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES += kmod-ath10k ath10k-firmware-qca988x
   IMAGE_SIZE := 15744k
   IMAGE/factory.bin := $$(IMAGE/sysupgrade.bin) | mkubntimage-split
 endef
@@ -134,7 +134,7 @@ TARGET_DEVICES += ubnt_nanostation-ac
 define Device/ubnt_nanostation-ac-loco
   $(Device/ubnt-wa)
   DEVICE_TITLE := Ubiquiti Nanostation AC loco
-  DEVICE_PACKAGES += kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES += kmod-ath10k ath10k-firmware-qca988x
   IMAGE_SIZE := 15744k
   IMAGE/factory.bin := $$(IMAGE/sysupgrade.bin) | mkubntimage-split
 endef
@@ -150,7 +150,7 @@ TARGET_DEVICES += ubnt_unifi
 define Device/ubnt_unifiac
   ATH_SOC := qca9563
   IMAGE_SIZE := 7744k
-  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x
 endef
 
 
