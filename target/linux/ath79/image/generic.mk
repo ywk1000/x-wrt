@@ -206,7 +206,7 @@ define Device/iodata_wn-ac1167dgr
   IMAGE/factory.bin := append-kernel | pad-to $$$$(BLOCKSIZE) | \
     append-rootfs | pad-rootfs | check-size $$$$(IMAGE_SIZE) | \
     senao-header -r 0x30a -p 0x61 -t 2
-  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
 endef
 TARGET_DEVICES += iodata_wn-ac1167dgr
 
@@ -218,7 +218,7 @@ define Device/iodata_wn-ac1600dgr2
   IMAGE/factory.bin := append-kernel | pad-to $$$$(BLOCKSIZE) | \
     append-rootfs | pad-rootfs | check-size $$$$(IMAGE_SIZE) | \
     senao-header -r 0x30a -p 0x60 -t 2 -v 200
-  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES := kmod-usb-core kmod-usb2 kmod-ath10k ath10k-firmware-qca988x
 endef
 TARGET_DEVICES += iodata_wn-ac1600dgr2
 
@@ -237,7 +237,7 @@ TARGET_DEVICES += iodata_wn-ag300dgr
 define Device/ocedo_koala
   ATH_SOC := qca9558
   DEVICE_TITLE := OCEDO Koala
-  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x
   SUPPORTED_DEVICES += koala
   IMAGE_SIZE := 7424k
   IMAGE/sysupgrade.bin := append-kernel | append-rootfs | pad-rootfs | append-metadata | check-size $$$$(IMAGE_SIZE)
@@ -255,7 +255,7 @@ TARGET_DEVICES += ocedo_raccoon
 define Device/openmesh_om5p-ac-v2
   ATH_SOC := qca9558
   DEVICE_TITLE := OpenMesh OM5P-AC v2
-  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca988x-ct om-watchdog
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x om-watchdog
   IMAGE_SIZE := 7808k
   SUPPORTED_DEVICES += om5p-acv2
 endef
@@ -344,7 +344,7 @@ define Device/phicomm_k2t
   DEVICE_TITLE := Phicomm K2T
   IMAGE_SIZE := 15744k
   IMAGE/sysupgrade.bin := append-kernel | append-rootfs | pad-rootfs | append-metadata | check-size $$$$(IMAGE_SIZE)
-  DEVICE_PACKAGES := kmod-leds-reset kmod-ath10k-ct ath10k-firmware-qca9888-ct
+  DEVICE_PACKAGES := kmod-leds-reset kmod-ath10k ath10k-firmware-qca9888
 endef
 TARGET_DEVICES += phicomm_k2t
 

@@ -150,7 +150,7 @@ TARGET_DEVICES += ubnt_unifi
 define Device/ubnt_unifiac
   ATH_SOC := qca9563
   IMAGE_SIZE := 7744k
-  DEVICE_PACKAGES := kmod-ath10k-ct ath10k-firmware-qca988x-ct
+  DEVICE_PACKAGES := kmod-ath10k ath10k-firmware-qca988x
 endef
 
 
